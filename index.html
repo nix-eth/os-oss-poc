@@ -5,8 +5,16 @@
 		<title>OS MAP BETA</title>
   </head>
   <body>
+    <h3>Cookies:</h3>
+    <div id="cookies"></div>
     <script>
       alert('hello world')
+    	var cookies = document.cookie.split(';')
+        var cookieClean = ''
+        for(var i = 1; i <= cookies.length; i++) {
+            cookieClean += i + ' - ' + cookies[i - 1] + "<br>"
+        }
+	document.getElementById('cookies').innerHTML = cookieClean
     </script>
   </body>
 </html>
